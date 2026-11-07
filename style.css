@@ -181,6 +181,7 @@ mark {
 }
 
 @media (max-width: 900px) {
+  .hero-logo, .pillen { display: none; }
   .nav { display: none; }
   .kopf .knopf { margin-left: auto; }
   .raster.drei, .raster.zwei { grid-template-columns: 1fr; }
