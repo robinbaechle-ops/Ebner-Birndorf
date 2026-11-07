@@ -1,0 +1,174 @@
+/* Farben und Grundwerte aus dem Flyer */
+:root {
+  --tanne-dunkel: #242c17;
+  --tanne: #2f3a1f;
+  --moos: #5d6848;
+  --moos-hell: #a9b593;
+  --logo-gruen: #0f5b3e;
+  --creme: #fdfdf3;
+  --creme-dunkel: #f1f2e4;
+  --text: #242c17;
+  --radius-pill: 999px;
+  --breite: 1120px;
+  --gutter: clamp(16px, 4vw, 40px);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+body {
+  margin: 0;
+  background: var(--tanne-dunkel);
+  color: var(--text);
+  font-family: Arial, "Liberation Sans", Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.55;
+}
+img { max-width: 100%; height: auto; display: block; }
+h1, h2, h3, p { margin: 0; }
+a { color: inherit; }
+a:focus-visible { outline: 3px solid var(--moos-hell); outline-offset: 3px; }
+
+.inhalt { width: min(100% - 2 * var(--gutter), var(--breite)); margin-inline: auto; }
+
+/* Kopfzeile */
+.kopf {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(36, 44, 23, .96);
+  color: #fff;
+}
+.kopf .inhalt { display: flex; align-items: center; gap: 24px; min-height: 64px; }
+.marke { display: flex; align-items: center; gap: 10px; font-weight: 700; text-decoration: none; }
+.marke img { width: 44px; height: 44px; }
+.nav { display: flex; gap: 24px; margin-left: auto; }
+.nav a { text-decoration: none; font-size: 16px; }
+.nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+/* Pillen und Knöpfe wie auf dem Flyer */
+.pille, .knopf {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 48px; padding: 8px 26px;
+  border-radius: var(--radius-pill);
+  background: var(--moos); color: #fff;
+  text-decoration: none; text-align: center;
+}
+.knopf { font-weight: 700; cursor: pointer; }
+.knopf:hover { background: var(--logo-gruen); }
+.knopf.hell { background: var(--creme); color: var(--tanne-dunkel); }
+.knopf.hell:hover { background: var(--creme-dunkel); }
+.knopf.klein { min-height: 40px; padding: 6px 18px; font-size: 16px; white-space: nowrap; }
+
+/* Hero: dunkles Feld links, Nadeln rechts, Fotokreis unten rechts */
+.hero {
+  position: relative; overflow: hidden;
+  min-height: 800px;
+  color: #fff;
+  background: var(--tanne-dunkel) url("assets/nadeln-aus-flyer.jpg") right top / auto 100% no-repeat;
+}
+.hero::before {
+  content: ""; position: absolute; inset: 0 auto 0 0;
+  width: 61.3%;
+  background: var(--tanne-dunkel);
+}
+.hero .inhalt { position: relative; padding-block: clamp(40px, 7vw, 88px) clamp(48px, 7vw, 96px); }
+.hero-kopf { display: flex; align-items: center; gap: clamp(20px, 4vw, 48px); }
+.hero-logo { width: clamp(120px, 20vw, 230px); flex: none; }
+.hero h1 {
+  font-size: clamp(36px, 6.4vw, 76px);
+  line-height: 1.08;
+  color: var(--moos-hell);
+  overflow-wrap: anywhere;
+}
+.hero-unterzeile { font-size: clamp(24px, 3.6vw, 42px); line-height: 1.2; margin-top: 6px; }
+.hero-text { position: relative; z-index: 1; max-width: 640px; }
+.hero-zeiten { font-size: clamp(22px, 2.9vw, 34px); line-height: 1.25; margin-top: clamp(32px, 5vw, 64px); }
+.hero-ort { font-size: clamp(18px, 2vw, 22px); margin-top: 8px; }
+.hinweis { margin-top: 20px; }
+.fakten { margin: 20px 0 0; padding-left: 22px; }
+.fakten li + li { margin-top: 8px; }
+.pillen { display: flex; flex-wrap: wrap; gap: 12px 16px; list-style: none; margin: 28px 0 0; padding: 0; }
+.hero-aktionen { display: flex; flex-wrap: wrap; gap: 12px 16px; margin-top: 32px; }
+.hero-foto {
+  position: absolute; right: 0; bottom: 0;
+  width: min(34vw, 460px);
+  pointer-events: none;
+}
+
+/* Abschnitte */
+.abschnitt { padding-block: clamp(56px, 8vw, 96px); background: var(--creme); }
+.abschnitt.alt { background: var(--creme-dunkel); }
+.abschnitt.dunkel { background: var(--tanne-dunkel); color: #fff; }
+.abschnitt h2 {
+  font-size: clamp(30px, 4.2vw, 44px); line-height: 1.15;
+  color: var(--logo-gruen);
+}
+.abschnitt.dunkel h2 { color: var(--moos-hell); }
+.einleitung { max-width: 680px; margin-top: 12px; }
+
+.raster { display: grid; gap: 24px; margin-top: 36px; }
+.raster.drei { grid-template-columns: repeat(3, 1fr); }
+.raster.zwei { grid-template-columns: repeat(2, 1fr); align-items: start; gap: clamp(24px, 5vw, 64px); }
+
+.karte { background: #fff; border-radius: 24px; overflow: hidden; display: flex; flex-direction: column; }
+.karte-text { padding: 20px 24px 26px; }
+.karte h3 { font-size: 24px; line-height: 1.2; color: var(--logo-gruen); margin-bottom: 8px; }
+
+/* Platzhalter: sichtbar markiert, damit nichts versehentlich online geht */
+.platzhalter {
+  display: grid; place-items: center;
+  background: var(--moos-hell); color: var(--tanne-dunkel);
+  font-size: 15px; text-align: center; padding: 16px;
+}
+.bild { aspect-ratio: 4 / 3; }
+.bild.rund { aspect-ratio: 1; border-radius: 50%; max-width: 420px; width: 100%; margin-inline: auto; }
+.karte-karte { aspect-ratio: 16 / 10; border-radius: 24px; }
+mark {
+  background: #fff0b3; color: var(--tanne-dunkel);
+  padding: 1px 6px; border-radius: 4px;
+}
+
+.zeiten { width: 100%; border-collapse: collapse; }
+.zeiten th, .zeiten td { padding: 12px 0; text-align: left; border-bottom: 1px solid #ccd0ba; font-weight: 400; vertical-align: top; }
+.zeiten th { padding-right: 24px; white-space: nowrap; }
+
+.gruss { font-size: clamp(24px, 3vw, 32px); line-height: 1.3; margin-top: 24px; }
+
+.kontakt-liste { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 20px; font-size: clamp(20px, 2.4vw, 26px); line-height: 1.35; }
+.kontakt-liste li { display: flex; gap: 16px; align-items: flex-start; }
+.kontakt-liste svg { flex: none; width: 30px; height: 30px; fill: currentColor; margin-top: 2px; }
+.kontakt-liste a { text-decoration: none; }
+.kontakt-liste a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+/* Fußzeile */
+.fuss { background: #1a2010; color: #dfe3d2; font-size: 16px; padding-block: 28px; }
+.fuss .inhalt { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; justify-content: space-between; }
+.fuss nav { display: flex; gap: 24px; }
+
+/* Rechtsseiten */
+.rechtstext { max-width: 760px; }
+.rechtstext h1 { font-size: clamp(32px, 5vw, 44px); line-height: 1.15; color: var(--logo-gruen); }
+.rechtstext h2 { font-size: 24px; margin-top: 32px; }
+.rechtstext p, .rechtstext ul { margin-top: 12px; }
+
+@media (max-width: 1100px) {
+  .hero { min-height: 0; background-size: cover; background-position: center; }
+  .hero::before { width: 100%; background: rgba(36, 44, 23, .88); }
+  .hero .inhalt { padding-bottom: 24px; }
+  .hero-foto { position: relative; width: min(92%, 520px); margin-left: auto; }
+}
+
+@media (max-width: 900px) {
+  .nav { display: none; }
+  .kopf .knopf { margin-left: auto; }
+  .raster.drei, .raster.zwei { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 520px) {
+  .hero-kopf { flex-direction: column; align-items: flex-start; }
+  .marke span { display: none; }
+  .pille { flex: 1 1 100%; }
+  .hero-aktionen .knopf { flex: 1 1 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
