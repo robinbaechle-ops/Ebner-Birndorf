@@ -143,6 +143,30 @@ mark {
 .fuss .inhalt { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; justify-content: space-between; }
 .fuss nav { display: flex; gap: 24px; }
 
+.link-knopf {
+  background: none; border: 0; padding: 0;
+  color: inherit; font: inherit;
+  text-decoration: underline; cursor: pointer;
+}
+
+/* Karte und Cookie-Banner */
+.karte-karte { overflow: hidden; }
+.karte-karte p { margin-bottom: 14px; font-size: 16px; }
+.karte-karte:has(iframe) { padding: 0; display: block; }
+.karte-karte iframe { display: block; width: 100%; height: 100%; border: 0; }
+
+.cookie-banner {
+  position: fixed; inset: auto 0 0 0; z-index: 20;
+  background: var(--tanne); color: #fff;
+  font-size: 16px; line-height: 1.45;
+  padding-block: 18px;
+  border-top: 1px solid var(--moos);
+}
+.cookie-banner[hidden] { display: none; }
+.cookie-banner .inhalt { display: flex; align-items: center; gap: 16px 32px; }
+.cookie-banner p { flex: 1; }
+.cookie-aktionen { display: flex; gap: 12px; flex: none; }
+
 /* Rechtsseiten */
 .rechtstext { max-width: 760px; }
 .rechtstext h1 { font-size: clamp(32px, 5vw, 44px); line-height: 1.15; color: var(--logo-gruen); }
@@ -160,6 +184,8 @@ mark {
   .nav { display: none; }
   .kopf .knopf { margin-left: auto; }
   .raster.drei, .raster.zwei { grid-template-columns: 1fr; }
+  .cookie-banner .inhalt { flex-direction: column; align-items: stretch; }
+  .cookie-aktionen .knopf { flex: 1; padding-inline: 12px; }
 }
 
 @media (max-width: 520px) {

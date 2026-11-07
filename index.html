@@ -139,7 +139,12 @@
           <a class="knopf hell" href="https://www.google.com/maps/search/?api=1&amp;query=Einungsstra%C3%9Fe+40,+79774+Albbruck-Birndorf" rel="noopener">Route planen</a>
         </div>
       </div>
-      <div class="platzhalter karte-karte">Lageplan oder Karte: wird erst nach Klick geladen</div>
+      <div class="platzhalter karte-karte" id="karte">
+        <div>
+          <p>Für die Karte von Google Maps brauchen wir eure Zustimmung.</p>
+          <button class="knopf" id="karte-laden" type="button">Karte laden</button>
+        </div>
+      </div>
     </div>
   </section>
 </main>
@@ -150,9 +155,22 @@
     <nav aria-label="Rechtliches">
       <a href="impressum.html">Impressum</a>
       <a href="datenschutz.html">Datenschutz</a>
+      <button class="link-knopf" id="cookie-einstellungen" type="button">Cookie-Einstellungen</button>
     </nav>
   </div>
 </footer>
+
+<aside class="cookie-banner" id="cookie-banner" aria-label="Cookie-Einstellungen" hidden>
+  <div class="inhalt">
+    <p>Wir möchten euch die Anfahrt auf einer Karte von Google Maps zeigen. Wenn ihr zustimmt, werden Daten wie eure IP-Adresse an Google übertragen, auch in die USA, und Google kann Cookies setzen. Eure Wahl könnt ihr jederzeit unten auf der Seite ändern. Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+    <div class="cookie-aktionen">
+      <button class="knopf hell" id="cookie-ja" type="button">Karte erlauben</button>
+      <button class="knopf hell" id="cookie-nein" type="button">Ablehnen</button>
+    </div>
+  </div>
+</aside>
+
+<script src="consent.js" defer></script>
 
 </body>
 </html>
