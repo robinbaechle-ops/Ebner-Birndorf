@@ -1,7 +1,7 @@
 // Google Maps wird erst nach Zustimmung geladen.
 (function () {
   var SCHLUESSEL = "karten-zustimmung";
-  var KARTE_URL = "https://www.google.com/maps?q=Einungsstra%C3%9Fe+40,+79774+Albbruck-Birndorf&output=embed";
+  var KARTE_URL = "https://www.google.com/maps?q=Einungsstra%C3%9Fe+40,+79774+Albbruck-Birndorf&t=k&output=embed";
 
   var banner = document.getElementById("cookie-banner");
   var feld = document.getElementById("karte");
