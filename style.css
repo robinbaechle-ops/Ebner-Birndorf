@@ -105,6 +105,8 @@ a:focus-visible { outline: 3px solid var(--moos-hell); outline-offset: 3px; }
 /* Abschnitte */
 .abschnitt { padding-block: clamp(56px, 8vw, 96px); background: var(--creme); }
 .abschnitt.alt { background: var(--creme-dunkel); }
+#baeume { padding-bottom: clamp(40px, 5vw, 64px); }
+#verkauf { padding-top: clamp(40px, 5vw, 64px); }
 .abschnitt.dunkel { background: var(--tanne-dunkel); color: #fff; }
 .abschnitt h2 {
   font-size: clamp(30px, 4.2vw, 44px); line-height: 1.15;
