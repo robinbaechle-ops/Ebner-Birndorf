@@ -60,7 +60,7 @@ a:focus-visible { outline: 3px solid var(--moos-hell); outline-offset: 3px; }
 /* Hero: dunkles Feld links, Nadeln rechts, Fotokreis unten rechts */
 .hero {
   position: relative; z-index: 2;
-  min-height: 800px;
+  min-height: 620px;
   color: #fff;
   background: var(--tanne-dunkel) url("assets/nadeln-hintergrund.webp") center / cover no-repeat;
 }
@@ -68,7 +68,7 @@ a:focus-visible { outline: 3px solid var(--moos-hell); outline-offset: 3px; }
   content: ""; position: absolute; inset: 0;
   background: rgba(36, 44, 23, .76);
 }
-.hero .inhalt { position: relative; padding-block: clamp(40px, 7vw, 88px) clamp(48px, 7vw, 96px); }
+.hero .inhalt { position: relative; padding-block: clamp(32px, 4vw, 56px) clamp(40px, 4.5vw, 64px); }
 .hero-kopf { display: flex; align-items: center; gap: clamp(20px, 4vw, 48px); }
 .hero-logo { width: clamp(120px, 20vw, 230px); flex: none; }
 .hero h1 {
@@ -98,7 +98,7 @@ a:focus-visible { outline: 3px solid var(--moos-hell); outline-offset: 3px; }
 .hero-aktionen { display: flex; flex-wrap: wrap; gap: 12px 16px; margin-top: 32px; }
 .hero-foto {
   position: absolute; right: 0; bottom: 0;
-  width: min(34vw, 460px);
+  width: min(23vw, 420px);
   pointer-events: none;
 }
 
