@@ -96,9 +96,8 @@ a:focus-visible { outline: 3px solid var(--moos-hell); outline-offset: 3px; }
 .pikto svg.gefuellt { fill: currentColor; stroke: none; }
 .pikto svg.gefuellt .vorn { stroke: var(--logo-gruen); stroke-width: 1; }
 .hero-aktionen { display: flex; flex-wrap: wrap; gap: 12px 16px; margin-top: 32px; }
-/* Fotokreis ragt unten in den hellen Abschnitt hinein */
 .hero-foto {
-  position: absolute; right: 0; bottom: -130px;
+  position: absolute; right: 0; bottom: 0;
   width: min(34vw, 460px);
   pointer-events: none;
 }
@@ -222,8 +221,7 @@ mark {
 @media (max-width: 1100px) {
   .hero { min-height: 0; }
   .hero .inhalt { padding-bottom: 24px; }
-  .hero-foto { position: relative; bottom: auto; width: min(92%, 520px); margin: 0 0 -90px auto; }
-  #baeume { padding-top: calc(clamp(56px, 8vw, 96px) + 90px); }
+  .hero-foto { position: relative; width: min(92%, 520px); margin-left: auto; }
   .raster.vier { grid-template-columns: repeat(2, 1fr); }
 }
 
