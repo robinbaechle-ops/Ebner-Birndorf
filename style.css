@@ -137,8 +137,10 @@ mark {
   padding: 1px 6px; border-radius: 4px;
 }
 
-.zeiten { width: 100%; border-collapse: collapse; }
-.zeiten th, .zeiten td { padding: 12px 0; text-align: left; border-bottom: 1px solid #ccd0ba; font-weight: 400; vertical-align: top; }
+#verkauf .einleitung { margin-top: 20px; }
+.zeiten { width: 100%; border-collapse: collapse; margin-top: 28px; border-top: 1px solid #ccd0ba; }
+#verkauf .hinweis { margin-top: 32px; }
+.zeiten th, .zeiten td { padding: 18px 0; text-align: left; border-bottom: 1px solid #ccd0ba; font-weight: 400; vertical-align: top; }
 .zeiten th { padding-right: 24px; white-space: nowrap; }
 
 /* Runde Fotogalerie */
