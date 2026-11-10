@@ -143,6 +143,10 @@ mark {
 #verkauf .einleitung { margin-top: 20px; }
 .zeiten { width: 100%; border-collapse: collapse; margin-top: 28px; border-top: 1px solid #ccd0ba; }
 #verkauf .hinweis { margin-top: 32px; }
+.nummer { white-space: nowrap; }
+#familie .raster.zwei { align-items: center; }
+/* Ausgleich für die Punkte unter dem Kreis, damit der Text mittig zum Kreis steht */
+@media (min-width: 901px) { #familie .raster.zwei > div:last-child { margin-bottom: 30px; } }
 .zeiten th, .zeiten td { padding: 18px 0; text-align: left; border-bottom: 1px solid #ccd0ba; font-weight: 400; vertical-align: top; }
 .zeiten th { padding-right: 24px; white-space: nowrap; }
 
@@ -236,6 +240,7 @@ mark {
   .kopf .knopf { margin-left: auto; }
   .raster.drei, .raster.zwei { grid-template-columns: 1fr; }
   #verkauf .raster.zwei { row-gap: 64px; }
+  .nur-desktop { display: none; }
   .cookie-banner .inhalt { flex-direction: column; align-items: stretch; }
   .cookie-aktionen .knopf { flex: 1; padding-inline: 12px; }
 }
