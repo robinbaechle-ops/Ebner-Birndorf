@@ -7,6 +7,6 @@
   var nachDerSaison = monat < 10 || (monat === 11 && tag > 23);
   if (!nachDerSaison) return;
 
-  document.getElementById("hero-zeiten").textContent = "Verkauf wieder ab November geöffnet!";
-  document.getElementById("verkauf-hinweis").textContent = "Die Saison ist vorbei. Verkauf wieder ab November in der Einungsstraße 40 in Birndorf.";
+  document.getElementById("hero-zeiten").textContent = "Verkauf wieder ab Dezember geöffnet!";
+  document.getElementById("verkauf-hinweis").textContent = "Die Saison ist vorbei. Verkauf wieder ab Dezember in der Hirschenscheune, Einungsstraße 40 in Birndorf.";
 })();
