@@ -96,6 +96,7 @@ a:focus-visible { outline: 3px solid var(--moos-hell); outline-offset: 3px; }
 .pikto svg.gefuellt { fill: currentColor; stroke: none; }
 .pikto svg.gefuellt .vorn { stroke: var(--logo-gruen); stroke-width: 1; }
 .hero-aktionen { display: flex; flex-wrap: wrap; gap: 12px 16px; margin-top: 32px; }
+.symbol-knopf svg { display: none; width: 26px; height: 26px; fill: currentColor; }
 .hero-foto {
   position: absolute; right: 0; bottom: 0;
   width: min(23vw, 420px);
@@ -246,7 +247,14 @@ mark {
   .marke span { display: none; }
   .hero-unterzeile { font-size: 21px; }
   .hero-ort { font-size: 16px; }
-  .hero-aktionen .knopf { flex: 1 1 100%; }
+  /* Runde Symbol-Knöpfe links, Fotokreis rechts daneben */
+  /* Knöpfe (2 × 56 px + 14 px Abstand = 126 px) mittig zur Bildhöhe (62vw × 816/735 ≈ 68.8vw) */
+  .hero-aktionen { flex-direction: column; gap: 14px; margin-top: calc(34.4vw - 63px + 20px); position: relative; z-index: 1; }
+  .symbol-knopf { width: 56px; height: 56px; min-height: 0; padding: 0; border-radius: 50%; }
+  .symbol-knopf svg { display: block; }
+  .symbol-knopf span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .hero .inhalt { padding-bottom: 0; }
+  .hero-foto { width: 62vw; margin: calc(-34.4vw - 63px) 0 0 auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
