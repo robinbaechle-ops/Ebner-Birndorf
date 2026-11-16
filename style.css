@@ -1,3 +1,14 @@
+/* Handschrift für den Gruß. Datei: assets/fonts/cellestion-regular.woff2 (Web-Lizenz nötig).
+   Fehlt die Datei, zeigt der Browser eine ähnliche Schreibschrift. */
+@font-face {
+  font-family: "Cellestion";
+  src: url("assets/fonts/cellestion-regular.woff2") format("woff2"),
+       url("assets/fonts/cellestion-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Farben und Grundwerte aus dem Flyer */
 :root {
   --tanne-dunkel: #242c17;
@@ -184,7 +195,7 @@ mark {
 .galerie-punkte button[aria-current="true"] { background: var(--logo-gruen); }
 @media (prefers-reduced-motion: reduce) { .galerie-fenster img { transition: none; } }
 
-.gruss { font-size: clamp(24px, 3vw, 32px); line-height: 1.3; margin-top: 24px; }
+.gruss { font-family: "Cellestion", "Segoe Script", "Brush Script MT", cursive; font-weight: 400; font-size: clamp(24px, 3vw, 32px); line-height: 1.3; margin-top: 24px; }
 
 .kontakt-liste { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 20px; font-size: clamp(20px, 2.4vw, 26px); line-height: 1.35; }
 .kontakt-liste li { display: flex; gap: 16px; align-items: flex-start; }
